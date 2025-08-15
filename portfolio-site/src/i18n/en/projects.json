@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Projects | Kris French Web Development",
+    "description": "A selection of recent website projects I have completed for local businesses in Zushi, Hayama, and Kamakura, as well as international clients."
+  },
+  "pageHeading": "Projects",
+  "intro": {
+    "heading": "Showcasing My Work",
+    "body": "Here are examples of the websites I have designed and developed, demonstrating my approach to modern, bilingual, and user-friendly web design."
+  },
+  "filters": {
+    "all": "All",
+    "websites": "Websites",
+    "ecommerce": "E-commerce",
+    "landingPages": "Landing Pages"
+  },
+  "projectCard": {
+    "viewDetails": "View Details"
+  },
+  "cta": {
+    "heading": "Let Us Build Something Great",
+    "body": "If you like what you see, I would be happy to discuss how we can create a website that works for your business.",
+    "button": "Contact Me"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Web Development Portfolio | Kris French",
+    "description": "Freelance web developer located in Zushi that specializes in modern, bilingual websites that help local businesses grow."
+  },
+  "hero": {
+    "headline": "Building Websites That Connect With Your Customers",
+    "subheadline": "I create modern, bilingual websites for local businesses around the Zushi, Hayama, and Kamakura area.",
+    "ctaPrimary": "Contact Me"
+  },
+  "intro": {
+    "heading": "Your Local Web Development Partner",
+    "body": "I help small businesses in the Shonan area reach more customers through fast, mobile-friendly websites in both English and Japanese."
+  },
+  "servicesPreview": {
+    "heading": "What I Offer",
+    "description": "From custom site builds to hosting and ongoing maintenance, I provide solutions that make your business stand out online."
+  },
+  "projectsPreview": {
+    "heading": "Featured Projects",
+    "description": "Take a look at some of my recent work for local and international clients."
+  },
+  "testimonialsPreview": {
+    "heading": "What My Clients Say",
+    "description": "See what local businesses think about working with me."
+  }
+}

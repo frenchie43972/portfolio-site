@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "Contact | Kris French Web Development",
+    "description": "Get in touch with Kris French to discuss your website project or ask any questions about web development services."
+  },
+  "pageHeading": "Contact",
+  "intro": {
+    "heading": "Let Us Talk About Your Project",
+    "body": "Whether you are ready to start your website or simply want more information, I am here to help. Please fill out the form below or use the provided contact details to reach me."
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "requiredField": "This field is required.",
+    "invalidEmail": "Please enter a valid email address."
+  },
+  "alternativeContact": {
+    "heading": "Other Ways to Reach Me",
+    "emailLabel": "Email:",
+    "phoneLabel": "Phone:"
+  }
+}

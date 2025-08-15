@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "viewProject": "View Project",
+    "viewAllProjects": "View All Projects",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "sendMessage": "Send Message"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "success": "Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "requiredField": "This field is required.",
+    "invalidEmail": "Please enter a valid email address."
+  },
+  "footer": {
+    "rightsReserved": "All rights reserved.",
+    "builtWith": "Built with Vue.js"
+  },
+  "languageToggle": {
+    "label": "Language",
+    "en": "English",
+    "ja": "日本語"
+  }
+}

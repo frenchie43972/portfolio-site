@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "services": "サービス",
+    "projects": "プロジェクト",
+    "about": "自己紹介",
+    "contact": "お問い合わせ"
+  },
+  "buttons": {
+    "viewProject": "プロジェクトを見る",
+    "viewAllProjects": "すべてのプロジェクトを見る",
+    "learnMore": "詳細を見る",
+    "getInTouch": "ご連絡ください",
+    "sendMessage": "メッセージを送る"
+  },
+  "form": {
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "メッセージ",
+    "submit": "送信",
+    "success": "メッセージを送信しました。ありがとうございます。",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "requiredField": "この項目は必須です。",
+    "invalidEmail": "有効なメールアドレスを入力してください。"
+  },
+  "footer": {
+    "rightsReserved": "全著作権所有",
+    "builtWith": "Vue.jsで構築"
+  },
+  "languageToggle": {
+    "label": "言語",
+    "en": "English",
+    "ja": "日本語"
+  }
+}
