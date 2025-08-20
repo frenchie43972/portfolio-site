@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { i18n, setHtmlLang } from '@/i18n'
 
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import HomePage from '@/pages/HomePage.vue'
@@ -6,6 +7,8 @@ import AboutPage from '@/pages/AboutPage.vue'
 import ContactPage from '@/pages/ContactPage.vue'
 import ProjectsPage from '@/pages/ProjectsPage.vue'
 import ServicesPage from '@/pages/ServicesPage.vue'
+
+const VALID_LOCALES = ['en', 'ja']
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +26,25 @@ const router = createRouter({
     },
     { path: '/', redirect: '/en' }, // default redirect
   ],
+})
+
+router.beforeEach((to) => {
+  const locale = to.params.locale
+
+  if (typeof locale !== 'string' || !VALID_LOCALES.includes(locale)) {
+    const targetName = to.name ?? 'home'
+
+    return {
+      name: targetName,
+      params: { ...to.params, locale: 'en' },
+      query: to.query,
+      hash: to.hash,
+    }
+  }
+
+  i18n.global.locale = locale
+  setHtmlLang(locale)
+  localStorage.setItem('locale', locale)
 })
 
 export default router
