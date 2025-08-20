@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <RouterView />
+  <h1>{{ $t('home.intro.heading') }}</h1>
 </template>
 
 <style scoped></style>
