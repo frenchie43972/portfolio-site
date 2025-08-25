@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+html,
+body {
+  height: 100%;
+  font-family: sans-serif; /* you’ll swap in a brand font later */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fbf3d5; /* or your site background */
+  color: #111; /* base text color */
+}
+
+/* Make images & media responsive by default */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Anchor reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}

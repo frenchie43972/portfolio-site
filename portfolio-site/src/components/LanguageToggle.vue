@@ -8,7 +8,7 @@ function toggleLanguage() {
   // Ternary expression that if currentLocale is en switch to ja else back to en (toggle languages)
   const targetLocale = currentLocale === 'en' ? 'ja' : 'en'
 
-  // Changes the route based on what is tru in toggleLocale.
+  // Changes the route based on what is true in toggleLocale.
   // Keeps the same route, just changes language
   router.push({
     name: route.name,
@@ -40,13 +40,14 @@ function toggleLanguage() {
 <style scoped>
 .language-toggle {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .toggle-pill {
   position: relative;
-  width: 45px;
+  width: 65px;
   height: 28px;
   background-color: green;
   border-radius: 18px; /*pill shape*/
