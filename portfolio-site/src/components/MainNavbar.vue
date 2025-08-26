@@ -52,6 +52,8 @@ import LanguageToggle from './LanguageToggle.vue'
   z-index: 1000;
   background-color: #cadcae;
   box-sizing: border-box;
+  /* box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2); */
+  /* transition: background-color 0.3s ease-in-out; */
 }
 
 .brand a {
@@ -70,6 +72,14 @@ import LanguageToggle from './LanguageToggle.vue'
 
 .nav-links a {
   text-decoration: none;
+  color: black;
   font-weight: 500;
+  /* transition: color 0.2s; */
+}
+
+.nav-links a:hover {
+  font-weight: bolder;
+  color: green;
+  /* transition: color 0.2s ease-in-out; */
 }
 </style>
