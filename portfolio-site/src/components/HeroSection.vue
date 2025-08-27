@@ -28,7 +28,7 @@ function gotToContactPage() {
   text-align: center;
   padding: 4rem 2rem;
   width: 100%;
-  max-width: 120ppx;
+  /* max-width: 120ppx; */
   min-height: 60vh;
   background: #f8f8f8;
 }

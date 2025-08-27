@@ -1,3 +1,3 @@
 <template>
-  <h1>{{ $t('projects.intro.heading') }}</h1>
+  <h3>{{ $t('projects.intro.heading') }}</h3>
 </template>

@@ -17,6 +17,26 @@
   "projectCard": {
     "viewDetails": "View Details"
   },
+  "projectsList": [
+    {
+      "id": "cafe-site",
+      "title": "Local Cafe Website",
+      "description": "A bilingual website for a Zushi-based cafe to attract both local and international customers.",
+      "image": "zachary_shea_unsplash.jpg",
+      "link": "https://cafesite.com",
+      "category": "websites",
+      "tags": ["Vue.js", "i18n", "CSS"]
+    },
+    {
+      "id": "surf-school",
+      "title": "Surf School Booking",
+      "description": "Online booking system for a surf school in Kamakura, enabling easy reservations in English and Japanese.",
+      "image": "zachary_shea_unsplash.jpg",
+      "link": "https://surfschool.com",
+      "category": "ecommerce",
+      "tags": ["Vue.js", "Firebase", "PWA"]
+    }
+  ],
   "cta": {
     "heading": "Let Us Build Something Great",
     "body": "If you like what you see, I would be happy to discuss how we can create a website that works for your business.",

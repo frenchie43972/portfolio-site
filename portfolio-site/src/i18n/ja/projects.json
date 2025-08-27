@@ -17,6 +17,26 @@
   "projectCard": {
     "viewDetails": "詳細を見る"
   },
+  "projectsList": [
+    {
+      "id": "cafe-site",
+      "title": "地元カフェのウェブサイト",
+      "description": "逗子のカフェ向けに、英語と日本語の両方で利用できるウェブサイトを制作しました。地元のお客様だけでなく、国際的なお客様にも対応しています。",
+      "image": "zachary_shea_unsplash.jpg",
+      "link": "https://cafesite.com",
+      "category": "websites",
+      "tags": ["Vue.js", "i18n", "CSS"]
+    },
+    {
+      "id": "surf-school",
+      "title": "サーフスクール予約システム",
+      "description": "鎌倉のサーフスクール向けに、英語と日本語で簡単に予約できるオンライン予約システムを開発しました。",
+      "image": "zachary_shea_unsplash.jpg",
+      "link": "https://surfschool.com",
+      "category": "ecommerce",
+      "tags": ["Vue.js", "Firebase", "PWA"]
+    }
+  ],
   "cta": {
     "heading": "素晴らしいものを一緒に作りましょう",
     "body": "もし私の制作事例を気に入っていただけたなら、お客様のビジネスに役立つウェブサイトをどのように作れるかについて、ぜひお話しさせてください。",
