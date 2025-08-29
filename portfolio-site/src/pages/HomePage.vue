@@ -1,10 +1,13 @@
 <script setup>
 import Hero from '@/components/HeroSection.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
+import projectsEN from '@/i18n/en/projects.json'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
+
+const firstProject = projectsEN.projectsList[0]
 
 function goToServicesPage() {
   router.push({ name: 'services', params: { locale: route.params.locale } })
@@ -44,7 +47,13 @@ function goToProjectsPage() {
       <p>{{ $t('home.projectsPreview.description') }}</p>
 
       <div class="projects-grid">
-        <ProjectCard title="Project" description="Description" />
+        <ProjectCard
+          :title="firstProject.title"
+          :description="firstProject.description"
+          :image="firstProject.image"
+          :link="firstProject.link"
+          :tags="firstProject.tags"
+        />
       </div>
 
       <button class="cta-button" @click="goToProjectsPage">

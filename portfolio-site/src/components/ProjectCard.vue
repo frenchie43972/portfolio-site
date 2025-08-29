@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
   title: String,
   description: String,
   image: String,
@@ -11,7 +11,7 @@ defineProps({
 })
 
 function getImagePath(filename) {
-  return new URL(`../assets/images${filename}`, import.meta.url).href
+  return new URL(`../assets/images/${filename}`, import.meta.url).href
 }
 </script>
 
@@ -69,7 +69,6 @@ function getImagePath(filename) {
 .tag {
   display: inline-block;
   background: #cadcae;
-  color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.75rem;
