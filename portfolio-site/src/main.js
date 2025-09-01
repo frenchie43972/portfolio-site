@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { i18n } from './i18n/index.js'
-import './assets/styles/base.css'
+import './assets/styles/global.css'
 import App from './App.vue'
 import router from './router'
 

@@ -1,13 +1,24 @@
 <script setup>
+import { computed } from 'vue'
 import Hero from '@/components/HeroSection.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import projectsEN from '@/i18n/en/projects.json'
+import projectsJA from '@/i18n/ja/projects.json'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
 
-const firstProject = projectsEN.projectsList[0]
+// Picks the correct JSON file based on locale
+// const projects = route.params.locale === 'ja' ? projectsJA.projectsList : projectsEN.projectsList
+
+// const previewProjects = projects.slice(0, 3)
+
+const projects = computed(() => {
+  return route.params.locale === 'ja' ? projectsJA.projectsList : projectsEN.projectsList
+})
+
+const previewProjects = computed(() => projects.value.slice(0, 3))
 
 function goToServicesPage() {
   router.push({ name: 'services', params: { locale: route.params.locale } })
@@ -26,13 +37,13 @@ function goToProjectsPage() {
     </section>
 
     <!-- Intro Section -->
-    <section class="intro-section">
+    <section class="intro-section container">
       <h2>{{ $t('home.intro.heading') }}</h2>
       <p>{{ $t('home.intro.body') }}</p>
     </section>
 
     <!-- Services Preview -->
-    <section class="services-preview">
+    <section class="services-preview container">
       <h2>{{ $t('home.servicesPreview.heading') }}</h2>
       <p>{{ $t('home.servicesPreview.description') }}</p>
 
@@ -42,17 +53,18 @@ function goToProjectsPage() {
     </section>
 
     <!-- Projects Preview Section -->
-    <section class="projects-preview">
+    <section class="projects-preview container">
       <h2>{{ $t('home.projectsPreview.heading') }}</h2>
       <p>{{ $t('home.projectsPreview.description') }}</p>
 
       <div class="projects-grid">
         <ProjectCard
-          :title="firstProject.title"
-          :description="firstProject.description"
-          :image="firstProject.image"
-          :link="firstProject.link"
-          :tags="firstProject.tags"
+          v-for="project in previewProjects"
+          :key="project.id"
+          :title="project.title"
+          :description="project.description"
+          :image="project.image"
+          :link="project.link"
         />
       </div>
 
@@ -125,7 +137,8 @@ function goToProjectsPage() {
 }
 
 .projects-preview {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
   text-align: center;
@@ -144,7 +157,7 @@ function goToProjectsPage() {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
 }

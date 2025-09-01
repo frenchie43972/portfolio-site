@@ -68,6 +68,45 @@ We decided to stub out the entire page structure before styling or adding detail
 
 ---
 
+Step 9: ProjectCard + Projects Preview Setup
+
+We introduced the ProjectCard component to display project information on the HomePage. This was the first time we moved beyond simple strings and had to render structured data (title, description, image, link).
+
+We discussed different strategies for handling project images:
+
+Public folder approach (simple paths, no optimization).
+
+Helper function with src/assets/ (our choice) → storing only filenames in JSON, then resolving them in Vue with new URL(...).
+
+Direct imports in components (tightly coupled but explicit).
+
+We chose Option 2 because it keeps JSON clean and still lets Vite optimize assets.
+
+Once the helper was set up, we tested by rendering one card with hardcoded props from projects.json. This confirmed the pipeline:
+JSON → props → ProjectCard → Vue resolves image.
+
+Next, we expanded to multiple cards by planning to loop through projectsList. At this stage, the layout wasn’t responsive yet — cards stacked in a column because of global CSS conflicts. We flagged that responsiveness would need attention soon
+
+---
+
+Step 10: Responsiveness Foundations
+
+We noticed that global CSS was constraining every <section> to max-width: 1200px, which caused the Hero background to not span full width. To fix this, we introduced a .container utility class:
+
+Sections like Intro, Services, Projects → wrapped in .container for centered, readable content.
+
+Sections like Hero → remain full-width, spanning edge to edge.
+
+This gives us flexibility and avoids one-size-fits-all CSS.
+
+We also discussed responsiveness strategy:
+
+Build fluid layouts with %, rem, auto-fit as we go.
+
+Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments).
+
+---
+
 Lessons Learned (So Far)
 
 - Do not put global resets inside scoped component styles; they won’t affect `<body>` or global elements. Keep resets in a global stylesheet.

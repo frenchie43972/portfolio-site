@@ -4,10 +4,6 @@ const props = defineProps({
   description: String,
   image: String,
   link: String,
-  tags: {
-    type: Array,
-    default: () => [],
-  },
 })
 
 function getImagePath(filename) {
@@ -22,9 +18,6 @@ function getImagePath(filename) {
     <div class="project-content">
       <h3>{{ props.title }}</h3>
       <p>{{ props.description }}</p>
-      <div class="project-tags">
-        <span class="tag" v-for="tag in tags" :key="tag">{{ tag }}</span>
-      </div>
       <a :href="link" target="_blank" rel="noopener noreferrer" class="view-details">
         {{ $t('projects.projectCard.viewDetails') }}
       </a>
@@ -60,19 +53,6 @@ function getImagePath(filename) {
 .project-content {
   padding: 1rem;
   text-align: left;
-}
-
-.project-tags {
-  margin: 0.5rem 0;
-}
-
-.tag {
-  display: inline-block;
-  background: #cadcae;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  margin-right: 0.5rem;
 }
 
 .view-details {

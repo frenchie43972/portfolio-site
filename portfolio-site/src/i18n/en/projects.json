@@ -24,8 +24,7 @@
       "description": "A bilingual website for a Zushi-based cafe to attract both local and international customers.",
       "image": "zachary_shea_unsplash.jpg",
       "link": "https://cafesite.com",
-      "category": "websites",
-      "tags": ["Vue.js", "i18n", "CSS"]
+      "category": "websites"
     },
     {
       "id": "surf-school",
@@ -33,8 +32,7 @@
       "description": "Online booking system for a surf school in Kamakura, enabling easy reservations in English and Japanese.",
       "image": "zachary_shea_unsplash.jpg",
       "link": "https://surfschool.com",
-      "category": "ecommerce",
-      "tags": ["Vue.js", "Firebase", "PWA"]
+      "category": "ecommerce"
     }
   ],
   "cta": {

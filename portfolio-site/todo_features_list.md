@@ -58,3 +58,37 @@
 - [ ] Enhance Intro section (make more engaging visually/textually)
 
 ---
+
+🛠️ Immediate Fixes / Next Steps
+
+Build out full Intro section with better text and visuals.
+
+Style Services preview with card layout.
+
+Loop through projectsList JSON instead of hardcoding cards.
+
+Add basic responsive containers to all HomePage sections.
+
+🎨 Styling Improvements
+
+Add visual dividers (e.g., <hr> or styled separators) between sections.
+
+Add animations or carousel to Hero section.
+
+Improve Intro section visuals (currently plain).
+
+📱 Responsiveness / UX
+
+Fix Navbar responsiveness → collapse into hamburger menu on small screens.
+
+Adjust font sizes & spacing with media queries for mobile.
+
+Verify projects grid collapses properly on tablet & mobile.
+
+🧩 Components Refactor
+
+Consider making a general Button component (reuse across Hero, Services, Projects, Contact).
+
+Polish ProjectCard (hover effects, clickable area).
+
+Ensure all localized strings (EN/JA) are correctly applied.
