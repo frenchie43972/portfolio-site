@@ -107,6 +107,35 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 
 ---
 
+✅ **Step 11**: Build `MainFooter.vue`
+
+- Included brand name linking to home route
+- Added translated nav links (services, projects, about, contact)
+- Social media icons with accessible anchor tags and aria-labels
+- Dynamic year copyright
+- Scoped styles and flex layout
+- Verified accessibility, reactivity, and i18n compliance
+
+---
+
+🛠️ Features to Fix/Add (Backlog)
+
+- [ ] Populate all pages: AboutPage, ServicesPage, ProjectsPage, ContactPage
+- [ ] Fill out `projects.json` with real content and images
+- [ ] Ensure full i18n coverage on all pages (EN + JA)
+- [ ] Add ContactForm.vue with validation and feedback (after pages are complete)
+- [ ] Add accessibility features (ARIA, keyboard nav)
+- [ ] Add basic SEO (meta tags, titles per route)
+- [ ] Create unit tests for key components (e.g., ProjectCard.vue)
+- [ ] Prepare site for deployment (e.g., Netlify or Vercel)
+- [ ] Add README badges and usage notes for GitHub
+- [ ] Fix footer responsiveness
+- [ ] Footer nav links bleed off the screen on mobile screens
+- [ ] fa icons need to be responsive; right now they shrink out of sight
+- [ ] JA translation text is larger, causing layout shifts; normalize text sizes with EN
+- [ ] Responsiveness in general will have to be dealt with
+- [ ] Add a logo to `.brand`; currently only displays name
+
 Lessons Learned (So Far)
 
 - Do not put global resets inside scoped component styles; they won’t affect `<body>` or global elements. Keep resets in a global stylesheet.

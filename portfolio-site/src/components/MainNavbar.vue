@@ -1,6 +1,17 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import LanguageToggle from './LanguageToggle.vue'
+import MobileNavDrawer from './MobileNavDrawer.vue'
+
+const menuOpen = ref(false)
+const bars = faBars
+
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value
+}
 </script>
 
 <template>
@@ -13,7 +24,13 @@ import LanguageToggle from './LanguageToggle.vue'
 
     <LanguageToggle />
 
-    <ul class="nav-links">
+    <div class="hamburger" @click="toggleMenu">
+      <FontAwesomeIcon :icon="bars" />
+    </div>
+
+    <MobileNavDrawer :isOpen="menuOpen" :onClose="() => (menuOpen = false)" />
+
+    <ul class="nav-links" aria-label="Navbar Navigation">
       <li>
         <RouterLink :to="{ name: 'services', params: { locale: $route.params.locale } }">
           {{ $t('common.nav.services') }}
@@ -49,11 +66,9 @@ import LanguageToggle from './LanguageToggle.vue'
   width: 100%;
   height: 80px;
   padding: 0.5rem 1rem;
-  z-index: 1000;
+  z-index: 10;
   background-color: #cadcae;
   box-sizing: border-box;
-  /* box-shadow: 0 6px 6px -1px rgba(0, 0, 0, 0.2); */
-  /* transition: background-color 0.3s ease-in-out; */
 }
 
 .brand a {
@@ -74,12 +89,25 @@ import LanguageToggle from './LanguageToggle.vue'
   text-decoration: none;
   color: black;
   font-weight: 500;
-  /* transition: color 0.2s; */
 }
 
 .nav-links a:hover {
   font-weight: bolder;
   color: green;
-  /* transition: color 0.2s ease-in-out; */
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
 }
 </style>
