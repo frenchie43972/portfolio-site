@@ -1,3 +1,11 @@
+<script setup></script>
+
 <template>
-  <h3>{{ $t('projects.intro.heading') }}</h3>
+  <section>{{ $t('projects.intro.heading') }}</section>
 </template>
+
+<style scoped>
+section {
+  height: 100vh;
+}
+</style>

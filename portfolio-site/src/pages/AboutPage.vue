@@ -1,3 +1,3 @@
 <template>
-  <h1>{{ $t('about.bio.heading') }}</h1>
+  <section>{{ $t('about.bio.heading') }}</section>
 </template>

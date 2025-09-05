@@ -1,3 +1,3 @@
 <template>
-  <h1>{{ $t('contact.intro.heading') }}</h1>
+  <section>{{ $t('contact.intro.heading') }}</section>
 </template>

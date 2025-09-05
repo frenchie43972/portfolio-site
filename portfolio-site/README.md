@@ -134,6 +134,17 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 
 ---
 
+✅ **Step 13**: Refactor Footer for Mobile
+
+- Assessed mobile footer UX on iPhone 14
+- Identified large gaps and redundancy between footer links and hamburger menu
+- Removed nav links from `MainFooter.vue` on mobile to prevent duplication
+- Reduced font size and spacing (`gap`) of social media icons for better layout fit
+- Verified appearance and spacing across breakpoints
+- Footer now presents a clean, focused layout on small screens
+
+---
+
 🛠️ Features to Fix/Add (Backlog)
 
 - [ ] Populate all pages: AboutPage, ServicesPage, ProjectsPage, ContactPage

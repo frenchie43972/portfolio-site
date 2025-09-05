@@ -143,7 +143,11 @@ const instagram = faSquareInstagram
   }
 
   .footer-social {
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+
+  .copyright {
+    font-size: 0.65rem;
   }
 }
 </style>
