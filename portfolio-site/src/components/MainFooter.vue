@@ -132,4 +132,18 @@ const instagram = faSquareInstagram
   font-weight: bolder;
   color: green;
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .fa-icon {
+    font-size: 1.5rem;
+  }
+
+  .footer-social {
+    gap: 1.5rem;
+  }
+}
 </style>

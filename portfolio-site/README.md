@@ -118,6 +118,22 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 
 ---
 
+✅ **Step 12**: Add Mobile Hamburger Menu
+
+- Added FontAwesome hamburger icon to `MainNavbar.vue` that appears on screens <768px
+- Introduced `MobileNavDrawer.vue` as a slide-in mobile navigation panel
+- Menu opens/closes via click and automatically closes on route change
+- Preserves locale param in all mobile links via `RouterLink`
+- LanguageToggle component reused inside the drawer for bilingual switching
+- CSS media queries hide desktop `.nav-links` and show `.hamburger`
+- Transition animation handled via `<transition name="slide">`
+- Style and layout scoped per component, with room to expand for responsiveness
+- Added backdrop click to close the drawer
+- ESC key now closes the drawer
+- Drawer layout updated to flex container with 75% drawer, 25% translucent backdrop
+
+---
+
 🛠️ Features to Fix/Add (Backlog)
 
 - [ ] Populate all pages: AboutPage, ServicesPage, ProjectsPage, ContactPage
@@ -135,6 +151,10 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 - [ ] JA translation text is larger, causing layout shifts; normalize text sizes with EN
 - [ ] Responsiveness in general will have to be dealt with
 - [ ] Add a logo to `.brand`; currently only displays name
+
+* [ ] Add role="dialog" and aria-labels to mobile nav for accessibility
+* [ ] Add keyboard focus trap (optional, accessibility boost)
+* [ ] Animate hamburger icon into "X" (optional polish)
 
 Lessons Learned (So Far)
 
