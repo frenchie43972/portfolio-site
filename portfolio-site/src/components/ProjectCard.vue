@@ -1,4 +1,8 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 const props = defineProps({
   title: String,
   description: String,
@@ -19,7 +23,7 @@ function getImagePath(filename) {
       <h3>{{ props.title }}</h3>
       <p>{{ props.description }}</p>
       <a :href="link" target="_blank" rel="noopener noreferrer" class="view-details">
-        {{ $t('projects.projectCard.viewDetails') }}
+        {{ t('projects.projectCard.viewDetails') }}
       </a>
     </div>
   </div>
@@ -51,12 +55,16 @@ function getImagePath(filename) {
 }
 
 .project-content {
+  flex: 1; /* take up all available height */
+  display: flex; /* allow internal layout */
+  flex-direction: column;
+  justify-content: space-between; /* push link to bottom */
   padding: 1rem;
   text-align: left;
 }
 
 .view-details {
-  display: inline-block;
+  align-self: flex-start; /* stays bottom-left */
   margin-top: 1rem;
   text-decoration: none;
   color: green;

@@ -34,9 +34,9 @@ h1 {
   font-size: 2.5rem;
 }
 .projects-section {
-  max-width: 1100px;
   padding: 2rem 1rem;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 .projects-grid {
@@ -44,5 +44,11 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>
