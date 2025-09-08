@@ -42,7 +42,7 @@ router.beforeEach((to) => {
     }
   }
 
-  i18n.global.locale = locale
+  i18n.global.locale.value = locale
   setHtmlLang(locale)
   localStorage.setItem('locale', locale)
 })

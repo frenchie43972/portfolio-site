@@ -33,6 +33,14 @@
       "image": "zachary_shea_unsplash.jpg",
       "link": "https://surfschool.com",
       "category": "ecommerce"
+    },
+    {
+      "id": "cafe-site1",
+      "title": "地元カフェのウェブサイト",
+      "description": "逗子のカフェ向けに、英語と日本語の両方で利用できるウェブサイトを制作しました。地元のお客様だけでなく、国際的なお客様にも対応しています。",
+      "image": "igor-starkov-unsplash.jpg",
+      "link": "https://cafesite.com",
+      "category": "websites"
     }
   ],
   "cta": {

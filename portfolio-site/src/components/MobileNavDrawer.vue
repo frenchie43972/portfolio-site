@@ -45,8 +45,6 @@ watch(
         ref="drawer"
       >
         <nav class="mobile-nav">
-          <LanguageToggle />
-
           <ul class="mobile-nav-links" aria-label="Navbar Mobile Navigation">
             <li>
               <RouterLink :to="{ name: 'services', params: { locale: $route.params.locale } }">

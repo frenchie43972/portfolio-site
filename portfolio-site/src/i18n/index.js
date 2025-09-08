@@ -41,6 +41,7 @@ const FALLBACK_LOCALE = 'en'
 
 // Creteas and exports the i18n instance
 export const i18n = createI18n({
+  legacy: false,
   globalInjection: true,
   locale: DEFAULT_LOCALE,
   fallbackLocale: FALLBACK_LOCALE,

@@ -145,6 +145,16 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 
 ---
 
+✅ **Step 14**: Fix i18n Integration
+
+- Identified issue: router guard was using `i18n.global.locale = locale` which only works in legacy mode
+- Updated to `i18n.global.locale.value = locale` for proper Composition API usage
+- Verified translations now switch correctly across Navbar, Footer, HomePage, and MobileNavDrawer
+- Confirmed `$t()` and `t()` calls function as expected in templates and `<script setup>`
+- Set plan to persist locale using `localStorage` to survive reloads
+
+---
+
 🛠️ Features to Fix/Add (Backlog)
 
 - [ ] Populate all pages: AboutPage, ServicesPage, ProjectsPage, ContactPage
@@ -166,6 +176,7 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 * [ ] Add role="dialog" and aria-labels to mobile nav for accessibility
 * [ ] Add keyboard focus trap (optional, accessibility boost)
 * [ ] Animate hamburger icon into "X" (optional polish)
+* [ ] Persist last selected locale in `localStorage` so user preference survives reloads
 
 Lessons Learned (So Far)
 
@@ -176,3 +187,7 @@ Lessons Learned (So Far)
 - Use CSS variables for shared dimensions like navbar height to keep content and layout aligned.
 - Build the structure first (stub) before styling. It avoids rework if sections are added, removed, or rearranged later.
 - Keep each component responsible for its own layout and logic — don’t spread responsibilities across unrelated files.
+
+* In Composition API mode (`legacy: false`), `i18n.global.locale` is a **ref** and must be updated with `.value`
+* Always guard array/object translations via `tm()` with `Array.isArray` to prevent runtime errors
+* Route guards should keep Vue Router, i18n, and `<html lang>` in sync

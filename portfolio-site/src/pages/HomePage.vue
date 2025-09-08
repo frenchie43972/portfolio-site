@@ -1,24 +1,19 @@
 <script setup>
 import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import Hero from '@/components/HeroSection.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
-import projectsEN from '@/i18n/en/projects.json'
-import projectsJA from '@/i18n/ja/projects.json'
 import { useRoute, useRouter } from 'vue-router'
+
+const { t, tm } = useI18n()
 
 const route = useRoute()
 const router = useRouter()
 
-// Picks the correct JSON file based on locale
-// const projects = route.params.locale === 'ja' ? projectsJA.projectsList : projectsEN.projectsList
-
-// const previewProjects = projects.slice(0, 3)
-
-const projects = computed(() => {
-  return route.params.locale === 'ja' ? projectsJA.projectsList : projectsEN.projectsList
+const previewProjects = computed(() => {
+  const fullList = tm('projects.projectsList')
+  return Array.isArray(fullList) ? fullList.slice(0, 3) : []
 })
-
-const previewProjects = computed(() => projects.value.slice(0, 3))
 
 function goToServicesPage() {
   router.push({ name: 'services', params: { locale: route.params.locale } })
@@ -38,24 +33,24 @@ function goToProjectsPage() {
 
     <!-- Intro Section -->
     <section class="intro-section container">
-      <h2>{{ $t('home.intro.heading') }}</h2>
-      <p>{{ $t('home.intro.body') }}</p>
+      <h2>{{ tm('home.intro.heading') }}</h2>
+      <p>{{ tm('home.intro.body') }}</p>
     </section>
 
     <!-- Services Preview -->
     <section class="services-preview container">
-      <h2>{{ $t('home.servicesPreview.heading') }}</h2>
-      <p>{{ $t('home.servicesPreview.description') }}</p>
+      <h2>{{ t('home.servicesPreview.heading') }}</h2>
+      <p>{{ t('home.servicesPreview.description') }}</p>
 
       <button class="cta-button" @click="goToServicesPage">
-        {{ $t('common.buttons.learnMore') }}
+        {{ t('common.buttons.learnMore') }}
       </button>
     </section>
 
     <!-- Projects Preview Section -->
     <section class="projects-preview container">
-      <h2>{{ $t('home.projectsPreview.heading') }}</h2>
-      <p>{{ $t('home.projectsPreview.description') }}</p>
+      <h2>{{ t('home.projectsPreview.heading') }}</h2>
+      <p>{{ t('home.projectsPreview.description') }}</p>
 
       <div class="projects-grid">
         <ProjectCard
@@ -69,7 +64,7 @@ function goToProjectsPage() {
       </div>
 
       <button class="cta-button" @click="goToProjectsPage">
-        {{ $t('common.buttons.viewAllProjects') }}
+        {{ t('common.buttons.viewAllProjects') }}
       </button>
     </section>
   </div>
