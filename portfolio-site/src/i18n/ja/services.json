@@ -3,49 +3,53 @@
     "title": "サービス | Kris French ウェブ開発",
     "description": "逗子・葉山・鎌倉エリアの地元企業向けに、カスタムサイト制作、ホスティング、継続的なメンテナンスを含むウェブ開発サービスを提供します。"
   },
-  "pageHeading": "サービス",
   "intro": {
-    "heading": "ビジネスのオンライン成功をサポートします",
-    "body": "デザインから開発、ホスティング、メンテナンスまで、ワンストップでウェブサイトソリューションを提供し、お客様がビジネス運営に専念できるようサポートします。"
+    "heading": "サービス",
+    "description": "個人事業主や中小企業向けに最適化したWeb開発サービスを提供します。"
   },
   "servicesList": [
     {
-      "title": "カスタムウェブサイト制作",
-      "description": "ブランドやビジネスニーズに合わせた、レスポンシブでモダンなウェブサイトを制作。英語と日本語の多言語対応も可能です。"
+      "id": 1,
+      "title": "ランディングページ開発",
+      "description": "最新のツールを使用し、高速・レスポンシブ・SEOに強いランディングページを構築します。",
+      "icon": "fa-file-code",
+      "link": "/contact"
     },
     {
-      "title": "ウェブサイトホスティング",
-      "description": "高速読み込み、安全な接続、定期的なバックアップを備えた信頼性の高いホスティングで、サイトを安定稼働させます。"
+      "id": 2,
+      "title": "ウェブサイト保守",
+      "description": "定期的な監視とアップデートにより、サイトを安全かつ最新の状態に保ちます。",
+      "icon": "fa-tools",
+      "link": "/contact"
     },
     {
-      "title": "継続的なメンテナンス",
-      "description": "毎月の更新、セキュリティチェック、パフォーマンス監視で、サイトを常に高速、安全、最新の状態に保ちます。"
+      "id": 3,
+      "title": "バグ修正・小規模作業",
+      "description": "レイアウト崩れやエラー、小さな機能追加などを迅速に対応します。",
+      "icon": "fa-bug",
+      "link": "/contact"
+    },
+    {
+      "id": 4,
+      "title": "ホスティングとデプロイ",
+      "description": "信頼性と稼働率を確保するために、サイトのホスティング設定と運用を行います。",
+      "icon": "fa-server",
+      "link": "/contact"
     }
   ],
-  "process": {
-    "heading": "制作の流れ",
-    "steps": [
-      {
-        "title": "1. ヒアリング",
-        "description": "ビジネス目標、ターゲット層、ウェブサイトの必要事項についてお伺いします。"
-      },
-      {
-        "title": "2. ご提案",
-        "description": "明確なプロジェクト計画、スケジュール、料金をご提示します。"
-      },
-      {
-        "title": "3. デザインと開発",
-        "description": "モダンでモバイル対応の技術を使ってウェブサイトを制作します。"
-      },
-      {
-        "title": "4. 公開とサポート",
-        "description": "サイトを公開し、必要に応じて継続的なサポートやメンテナンスを行います。"
-      }
-    ]
-  },
   "cta": {
     "heading": "さあ、始めましょう！",
     "body": "一緒に、ビジネスの成長を支えるウェブサイトを作りましょう。",
     "button": "お問い合わせ"
+  },
+  "techStack": {
+    "heading": "技術スタック",
+    "description": "Webサイトの構築と運用に使用しているツールと技術です。",
+    "stackList": [
+      { "id": 1, "name": "HTML5", "icon": "/src/assets/icons/html5.svg" },
+      { "id": 2, "name": "CSS3", "icon": "/src/assets/icons/css.svg" },
+      { "id": 3, "name": "JavaScript (ES6+)", "icon": "/src/assets/icons/javascript.svg" },
+      { "id": 4, "name": "Vue.js", "icon": "/src/assets/icons/vuedotjs.svg" }
+    ]
   }
 }

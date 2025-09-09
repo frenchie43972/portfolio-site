@@ -37,15 +37,10 @@ function getImagePath(filename) {
   border-radius: 8px;
   overflow: hidden;
   background: white;
-  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition:
     trasform 0.2s ease,
     box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
@@ -67,6 +62,7 @@ function getImagePath(filename) {
   align-self: flex-start; /* stays bottom-left */
   margin-top: 1rem;
   text-decoration: none;
+  font-size: 0.8rem;
   color: green;
   font-weight: bold;
 }

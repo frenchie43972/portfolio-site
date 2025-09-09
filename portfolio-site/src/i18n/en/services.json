@@ -3,49 +3,53 @@
     "title": "Services | Kris French Web Development",
     "description": "Web development services including custom site builds, hosting, and ongoing maintenance for local businesses in the Zushi, Hayama, and Kamakura area."
   },
-  "pageHeading": "Services",
   "intro": {
-    "heading": "Helping Your Business Succeed Online",
-    "body": "I provide end-to-end website solutions, from design and development to hosting and maintenance, so you can focus on running your business."
+    "heading": "Services",
+    "description": "I offer a range of web development services tailored to small businesses and individuals."
   },
   "servicesList": [
     {
-      "title": "Custom Website Builds",
-      "description": "Responsive, modern websites tailored to your brand and business needs, with bilingual support for English and Japanese."
+      "id": 1,
+      "title": "Landing Page Development",
+      "description": "Fast, responsive, and SEO-friendly landing pages built with modern tools.",
+      "icon": "fa-file-code",
+      "link": "/contact"
     },
     {
-      "title": "Website Hosting",
-      "description": "Reliable hosting with fast load times, secure connections, and regular backups to keep your site running smoothly."
+      "id": 2,
+      "title": "Website Maintenance",
+      "description": "Keep your site secure and up-to-date with regular monitoring and updates.",
+      "icon": "fa-tools",
+      "link": "/contact"
     },
     {
-      "title": "Ongoing Maintenance",
-      "description": "Monthly updates, security checks, and performance monitoring to ensure your site stays fast, safe, and up to date."
+      "id": 3,
+      "title": "Bug Fixes & Small Tasks",
+      "description": "Quick turnaround for fixing broken layouts, errors, or small feature requests.",
+      "icon": "fa-bug",
+      "link": "/contact"
+    },
+    {
+      "id": 4,
+      "title": "Hosting & Deployment",
+      "description": "Setup and manage hosting for your site, ensuring reliability and uptime.",
+      "icon": "fa-server",
+      "link": "/contact"
     }
   ],
-  "process": {
-    "heading": "How It Works",
-    "steps": [
-      {
-        "title": "1. Consultation",
-        "description": "We discuss your business goals, target audience, and website needs."
-      },
-      {
-        "title": "2. Proposal",
-        "description": "You receive a clear project plan, timeline, and pricing."
-      },
-      {
-        "title": "3. Design & Development",
-        "description": "I create your website using modern, mobile-friendly technology."
-      },
-      {
-        "title": "4. Launch & Support",
-        "description": "Your site goes live with full support and optional ongoing maintenance."
-      }
-    ]
-  },
   "cta": {
     "heading": "Ready to Start?",
     "body": "Let's work together to create a website that helps your business grow.",
     "button": "Contact Me"
+  },
+  "techStack": {
+    "heading": "Tech Stack",
+    "description": "The tools and technologies I use to build and maintain websites.",
+    "stackList": [
+      { "id": 1, "name": "HTML5", "icon": "html5.svg" },
+      { "id": 2, "name": "CSS3", "icon": "css.svg" },
+      { "id": 3, "name": "JavaScript (ES6+)", "icon": "javascript.svg" },
+      { "id": 4, "name": "Vue.js", "icon": "vuedotjs.svg" }
+    ]
   }
 }

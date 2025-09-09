@@ -167,16 +167,16 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 - [ ] Prepare site for deployment (e.g., Netlify or Vercel)
 - [ ] Add README badges and usage notes for GitHub
 - [ ] Fix footer responsiveness
-- [ ] Footer nav links bleed off the screen on mobile screens
-- [ ] fa icons need to be responsive; right now they shrink out of sight
+- [ X ] Footer nav links bleed off the screen on mobile screens
+- [ X ] fa icons need to be responsive; right now they shrink out of sight
 - [ ] JA translation text is larger, causing layout shifts; normalize text sizes with EN
 - [ ] Responsiveness in general will have to be dealt with
 - [ ] Add a logo to `.brand`; currently only displays name
 
-* [ ] Add role="dialog" and aria-labels to mobile nav for accessibility
-* [ ] Add keyboard focus trap (optional, accessibility boost)
-* [ ] Animate hamburger icon into "X" (optional polish)
-* [ ] Persist last selected locale in `localStorage` so user preference survives reloads
+- [ ] Add role="dialog" and aria-labels to mobile nav for accessibility
+- [ ] Add keyboard focus trap (optional, accessibility boost)
+- [ ] Animate hamburger icon into "X" (optional polish)
+- [ ] Persist last selected locale in `localStorage` so user preference survives reloads
 
 Lessons Learned (So Far)
 
