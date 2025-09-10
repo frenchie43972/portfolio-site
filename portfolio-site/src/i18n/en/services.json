@@ -48,7 +48,7 @@
     "stackList": [
       { "id": 1, "name": "HTML5", "icon": "html5.svg" },
       { "id": 2, "name": "CSS3", "icon": "css.svg" },
-      { "id": 3, "name": "JavaScript (ES6+)", "icon": "javascript.svg" },
+      { "id": 3, "name": "JavaScript", "icon": "javascript.svg" },
       { "id": 4, "name": "Vue.js", "icon": "vuedotjs.svg" }
     ]
   }
