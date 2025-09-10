@@ -11,10 +11,13 @@ function getImagePath(filename) {
 
 <template>
   <section>
-    <h1>{{ t('services.intro.heading') }}</h1>
+    <h1 class="section-heading">{{ t('services.intro.heading') }}</h1>
   </section>
 
   <section>
+    <h2 class="techStack-heading">
+      {{ t('services.techStack.heading') }}
+    </h2>
     <div class="stack-grid">
       <div class="stack-item" v-for="tech in stack" :key="tech.id">
         <img :src="getImagePath(tech.icon)" :alt="tech.name" class="stack-icon" />
@@ -24,12 +27,20 @@ function getImagePath(filename) {
 </template>
 
 <style scoped>
+.section-heading {
+  font-size: 2.2rem;
+  text-align: center;
+}
+.techStack-heading {
+  font-size: 1.75rem;
+  text-align: center;
+}
 .stack-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
   justify-content: center;
-  /* margin-top: 2rem 0; */
+  margin-top: 0;
 }
 
 .stack-item {

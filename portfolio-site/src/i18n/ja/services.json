@@ -43,7 +43,7 @@
     "button": "お問い合わせ"
   },
   "techStack": {
-    "heading": "技術スタック",
+    "heading": "使用技術",
     "description": "Webサイトの構築と運用に使用しているツールと技術です。",
     "stackList": [
       { "id": 1, "name": "HTML5", "icon": "/src/assets/icons/html5.svg" },

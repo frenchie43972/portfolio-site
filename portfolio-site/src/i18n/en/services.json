@@ -43,7 +43,7 @@
     "button": "Contact Me"
   },
   "techStack": {
-    "heading": "Tech Stack",
+    "heading": "Skills & Tools",
     "description": "The tools and technologies I use to build and maintain websites.",
     "stackList": [
       { "id": 1, "name": "HTML5", "icon": "html5.svg" },
