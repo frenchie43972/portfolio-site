@@ -13,28 +13,28 @@
       "title": "Landing Page Development",
       "description": "Fast, responsive, and SEO-friendly landing pages built with modern tools.",
       "icon": "fa-file-code",
-      "link": "/contact"
+      "link": "Contact Me"
     },
     {
       "id": 2,
       "title": "Website Maintenance",
       "description": "Keep your site secure and up-to-date with regular monitoring and updates.",
       "icon": "fa-tools",
-      "link": "/contact"
+      "link": "Contact Me"
     },
     {
       "id": 3,
       "title": "Bug Fixes & Small Tasks",
       "description": "Quick turnaround for fixing broken layouts, errors, or small feature requests.",
       "icon": "fa-bug",
-      "link": "/contact"
+      "link": "Contact Me"
     },
     {
       "id": 4,
       "title": "Hosting & Deployment",
       "description": "Setup and manage hosting for your site, ensuring reliability and uptime.",
       "icon": "fa-server",
-      "link": "/contact"
+      "link": "Contact Me"
     }
   ],
   "cta": {

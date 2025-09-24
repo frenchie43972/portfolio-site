@@ -13,28 +13,28 @@
       "title": "ランディングページ開発",
       "description": "最新のツールを使用し、高速・レスポンシブ・SEOに強いランディングページを構築します。",
       "icon": "fa-file-code",
-      "link": "/contact"
+      "link": "お問い合わせ"
     },
     {
       "id": 2,
       "title": "ウェブサイト保守",
       "description": "定期的な監視とアップデートにより、サイトを安全かつ最新の状態に保ちます。",
       "icon": "fa-tools",
-      "link": "/contact"
+      "link": "お問い合わせ"
     },
     {
       "id": 3,
       "title": "バグ修正・小規模作業",
       "description": "レイアウト崩れやエラー、小さな機能追加などを迅速に対応します。",
       "icon": "fa-bug",
-      "link": "/contact"
+      "link": "お問い合わせ"
     },
     {
       "id": 4,
       "title": "ホスティングとデプロイ",
       "description": "信頼性と稼働率を確保するために、サイトのホスティング設定と運用を行います。",
       "icon": "fa-server",
-      "link": "/contact"
+      "link": "お問い合わせ"
     }
   ],
   "cta": {

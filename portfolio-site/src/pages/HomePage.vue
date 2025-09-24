@@ -1,9 +1,11 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Hero from '@/components/HeroSection.vue'
-import ProjectCard from '@/components/ProjectCard.vue'
 import { useRoute, useRouter } from 'vue-router'
+import HorizontalRule from '@/components/HorizontalRule.vue'
+import Hero from '@/components/HeroSection.vue'
+import ServicesCard from '@/components/ServicesCard.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
 
 const { t, tm } = useI18n()
 
@@ -12,6 +14,11 @@ const router = useRouter()
 
 const previewProjects = computed(() => {
   const fullList = tm('projects.projectsList')
+  return Array.isArray(fullList) ? fullList.slice(0, 3) : []
+})
+
+const previewServices = computed(() => {
+  const fullList = tm('services.servicesList')
   return Array.isArray(fullList) ? fullList.slice(0, 3) : []
 })
 
@@ -37,15 +44,31 @@ function goToProjectsPage() {
       <p>{{ tm('home.intro.body') }}</p>
     </section>
 
+    <HorizontalRule />
+
     <!-- Services Preview -->
     <section class="services-preview container">
       <h2>{{ t('home.servicesPreview.heading') }}</h2>
       <p>{{ t('home.servicesPreview.description') }}</p>
 
+      <div class="services-grid">
+        <ServicesCard
+          v-for="service in previewServices"
+          :key="service.id"
+          :title="service.title"
+          :description="service.description"
+          :icon="service.icon"
+          :link="service.link"
+          :showButton="false"
+        />
+      </div>
+
       <button class="cta-button" @click="goToServicesPage">
         {{ t('common.buttons.learnMore') }}
       </button>
     </section>
+
+    <HorizontalRule />
 
     <!-- Projects Preview Section -->
     <section class="projects-preview container">
@@ -129,6 +152,13 @@ function goToProjectsPage() {
   margin-bottom: 2rem;
   color: #444;
   line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .projects-preview {

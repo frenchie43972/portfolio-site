@@ -155,6 +155,22 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 
 ---
 
+✅ **Step 15**: Build ServicesPage.vue + ServicesCard.vue
+
+Created ServicesCard component to display each service with title, description, Font Awesome icon, and CTA button.
+
+Wired servicesList JSON into ServicesPage and looped through to render cards.
+
+Added Tech Stack section with logos (imported from /assets/icons).
+
+Implemented responsive layout: cards grid adapts to screen size, tech stack displays in 2x2 layout on tablets, stacked on smaller devices.
+
+Accessibility: added aria-labels, ensured headings are semantic.
+
+Deferred button refactor until a reusable Button component is built later.
+
+---
+
 🛠️ Features to Fix/Add (Backlog)
 
 - [ ] Populate all pages: AboutPage, ServicesPage, ProjectsPage, ContactPage
@@ -177,6 +193,8 @@ Reserve media queries for breakpoints (Navbar, font scaling, spacing adjustments
 - [ ] Add keyboard focus trap (optional, accessibility boost)
 - [ ] Animate hamburger icon into "X" (optional polish)
 - [ ] Persist last selected locale in `localStorage` so user preference survives reloads
+- [ ] Build a reusable Button component (replace JSON button text + duplicate .cta-button styles)
+- [ ] Refactor ServicesCard routing (decide if all go to Contact or unique routes)
 
 Lessons Learned (So Far)
 
