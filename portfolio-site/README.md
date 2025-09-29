@@ -171,6 +171,26 @@ Deferred button refactor until a reusable Button component is built later.
 
 ---
 
+✅ **Step 16**: Build BaseButton.vue
+
+Created a reusable BaseButton component to replace all scattered <button> and CTA styles.
+
+Supports variants (primary, secondary, outline), sizes (small, medium, large), and disabled state.
+
+Polymorphic design:
+
+Renders a real <button> for actions (@click, form submit).
+
+Renders a <RouterLink> when a to prop is passed for navigation.
+
+Shared styling applied via .base-button class, ensuring consistent look across all buttons.
+
+Accessibility preserved: semantic HTML for buttons vs. navigation.
+
+Logged a backlog item to refactor existing buttons (HomePage, ServicesPage, etc.) to use BaseButton.
+
+---
+
 🛠️ Features to Fix/Add (Backlog)
 
 - [ ] Populate all pages: AboutPage, ServicesPage, ProjectsPage, ContactPage
@@ -195,6 +215,10 @@ Deferred button refactor until a reusable Button component is built later.
 - [ ] Persist last selected locale in `localStorage` so user preference survives reloads
 - [ ] Build a reusable Button component (replace JSON button text + duplicate .cta-button styles)
 - [ ] Refactor ServicesCard routing (decide if all go to Contact or unique routes)
+- [ ] Replace all existing buttons with BaseButton for consistency.
+- [ ] Build a design system for components (BaseButton is first step).
+- [ ] Continue page development: AboutPage (text-heavy content + i18n) is next priority.
+- [ ] ContactForm.vue (after AboutPage) with validation, feedback, and i18n.
 
 Lessons Learned (So Far)
 
