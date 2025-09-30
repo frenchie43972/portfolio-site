@@ -3,6 +3,7 @@ import { defineProps } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faFileCode, faTools, faBug, faServer } from '@fortawesome/free-solid-svg-icons'
+import BaseButton from './BaseButton.vue'
 
 const props = defineProps({
   title: String,
@@ -34,14 +35,14 @@ function contactRoute() {
     <div class="services-content">
       <h3>{{ props.title }}</h3>
       <p>{{ props.description }}</p>
-      <button
+      <BaseButton
         v-if="props.showButton"
-        class="cta-button"
+        class="service-card-btn"
         @click="contactRoute"
         aria-label="Contact about this service"
       >
         {{ props.link }}
-      </button>
+      </BaseButton>
     </div>
   </div>
 </template>
@@ -77,21 +78,12 @@ function contactRoute() {
   margin-bottom: 1rem;
 }
 
-.cta-button {
+.service-card-btn {
   padding: 1rem;
   width: 50%;
   align-self: center;
-  background-color: #cadcae;
-  border-radius: 20px;
-  border: #cadcae;
-  font-weight: bolder;
+  text-align: center;
   font-size: 1rem;
   margin-top: 1.5rem;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  filter: brightness(95%);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 </style>

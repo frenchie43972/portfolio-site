@@ -8,7 +8,7 @@ defineProps({
   },
   size: {
     type: String,
-    default: 'medium', // smal | medium | large
+    default: 'medium', // small | medium | large
   },
   disabled: {
     type: Boolean,

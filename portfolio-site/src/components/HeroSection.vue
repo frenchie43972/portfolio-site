@@ -1,5 +1,7 @@
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
+import BaseButton from './BaseButton.vue'
+
 const route = useRoute()
 const router = useRouter()
 
@@ -13,9 +15,9 @@ function gotToContactPage() {
     <h1>{{ $t('home.hero.headline') }}</h1>
     <h2>{{ $t('home.hero.subheadline') }}</h2>
 
-    <button class="cta-button" @click="gotToContactPage">
+    <BaseButton @click="gotToContactPage">
       {{ $t('home.hero.ctaPrimary') }}
-    </button>
+    </BaseButton>
   </div>
 </template>
 
@@ -43,20 +45,5 @@ function gotToContactPage() {
   margin-bottom: 2rem;
   max-width: 600px;
   line-height: 1.4;
-}
-
-.cta-button {
-  padding: 1rem 2rem;
-  background-color: #cadcae;
-  border-radius: 20px;
-  border: #cadcae;
-  font-weight: bolder;
-  font-size: 1.2rem;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  filter: brightness(95%);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 </style>

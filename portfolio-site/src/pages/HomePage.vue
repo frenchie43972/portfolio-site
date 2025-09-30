@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
+import BaseButton from '@/components/BaseButton.vue'
 import HorizontalRule from '@/components/HorizontalRule.vue'
 import Hero from '@/components/HeroSection.vue'
 import ServicesCard from '@/components/ServicesCard.vue'
@@ -63,9 +64,9 @@ function goToProjectsPage() {
         />
       </div>
 
-      <button class="cta-button" @click="goToServicesPage">
+      <BaseButton @click="goToServicesPage">
         {{ t('common.buttons.learnMore') }}
-      </button>
+      </BaseButton>
     </section>
 
     <HorizontalRule />
@@ -86,29 +87,14 @@ function goToProjectsPage() {
         />
       </div>
 
-      <button class="cta-button" @click="goToProjectsPage">
+      <BaseButton @click="goToProjectsPage">
         {{ t('common.buttons.viewAllProjects') }}
-      </button>
+      </BaseButton>
     </section>
   </div>
 </template>
 
 <style scoped>
-.cta-button {
-  padding: 1rem 2rem;
-  background-color: #cadcae;
-  border-radius: 20px;
-  border: #cadcae;
-  font-weight: bolder;
-  font-size: 1.2rem;
-}
-
-.cta-button:hover {
-  transform: translateY(-3px);
-  filter: brightness(95%);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 .home-page {
   display: flex;
   flex-direction: column;
